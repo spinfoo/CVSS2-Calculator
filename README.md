@@ -8,10 +8,10 @@ CVSSv2.js is a Free and Open Source Javascript library that is based on Common V
 
 For a better understanding on how CVSS works, you should read the [Complete Guide to the Common Vulnerability Scoring System Version 2.0](http://www.first.org/cvss/cvss-guide).
 
-##Live Demo
+## Live Demo
 You can see Live Demo of CVSS2.js library [here](https://bit-sentinel.com/common-vulnerability-scoring-system-cvss-2-0-online-calculator/).
 
-##Features
+## Features
 * friendly charts that explain the results of any computed CVSS2 vector
 * on the fly description of Basic, Temporal or Enviromental Metrics
 * permalink of any vector computed using CVSSv2.js, available for sharing. Example: *http://your-url-to-calculator.com/#vector=AV:L/AC:M/Au:S/C:P/I:P/*
@@ -91,5 +91,26 @@ CVSS2.addHTMLURL = function(hook) /* generate permanent url vector that can be e
 CVSS2.generateEmptyCVSS2HTML = function(hook, loadbuttons) /* generate the default UI/UX (HTML) of the CVSSv2 Calculator */
 ```
 
-##License
+## License
 Althought CVSS2.0 is licensed under GPLv3+, it uses [jqplot](http://www.jqplot.com/) files, as well as [jQuery's](http://jquery.com).  These projects are licensed as their authors defined.
+
+
+# Docker support usage
+
+## Build the docker image
+
+```
+docker build --rm -t spinfoo/cvss:1.1 .
+```
+
+## Run the docker image
+
+```
+docker run -p 8881:80 -it spinfoo/cvss:1.1
+```
+
+Open your browser and search the web on http://127.0.0.1:8881/
+
+## TODO
+* Add persistency to have a backlog of vulnerabilities and scores
+* Add charts and business intelligence
